@@ -1,7 +1,6 @@
 import java.util.*;
 public class MakeAnagram {
 
-
 	public static int deletionRequired(String a, String b) {
 		/*Declare the integer array of 26 ie total alphabets*/
 		int[] lettercounts = new int[26];
@@ -9,16 +8,16 @@ public class MakeAnagram {
 		/*For each char c convery the string to the Character array*/
 		for(char c : a.toCharArray()){
 			lettercounts[c - 'a']++;		//Increment the Lettercount array ie a-a = 0
-			System.out.println(Arrays.toString(lettercounts));
+			//System.out.println(Arrays.toString(lettercounts));
 		}
 
 		/*For each char c convery the string to the Character array*/
 		for(char c : b.toCharArray()){
 			lettercounts[c - 'a']--;		//Decrement the Lettercount array
-			System.out.println(Arrays.toString(lettercounts));
+			//System.out.println(Arrays.toString(lettercounts));
 		}
 		
-		System.out.println(Arrays.toString(lettercounts));
+		//System.out.println(Arrays.toString(lettercounts));
 
 		int result = 0;
 		for(int i : lettercounts){			//for each i in lettercounts
@@ -29,22 +28,14 @@ public class MakeAnagram {
 	}
 
 	public static void main(String[] args) {
-		/*Scanner in = new Scanner(System.in);
-		System.out.println("Enter the First String:");//Scan first string
-		String a = in.nextLine();			
-		System.out.println("Enter the Second String:");//Scan second string 
-		String b = in.nextLine();			
-		*/
+	
 		String  a = "abc";
 		String  b = "cbc";
 
-		System.out.println("The Total number of deletions required to make Both strings Anagram is :"+ deletionRequired(a, b));
+		System.out.println("The Total number of deletions required to make Both strings Anagram is : "+ deletionRequired(a, b));
 	}
 
 }
-
-
-
 
 
 
@@ -85,9 +76,6 @@ public boolean solve() {
     return isValid;
 }
 */
-
-
-
 
 
 /*

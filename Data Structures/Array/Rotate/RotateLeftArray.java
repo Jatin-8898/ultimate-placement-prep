@@ -24,7 +24,7 @@ public class RotateLeftArray{
 
   void add(){ 
     try{
-        int i,j;
+        int i;
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("ENTER THE TOTAL NO OF ELEMENTS:");
         int num = Integer.parseInt(br.readLine());

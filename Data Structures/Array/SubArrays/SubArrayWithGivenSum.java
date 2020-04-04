@@ -28,7 +28,6 @@ class SubArrayWithGivenSum{
 				start++;					//Go to next index ie 1st index of array and so on
 			}
 
-
 			 // If curr_sum becomes equal to sum, then return true
 			if(currentSum  ==  sum){
 				int p = i-1;

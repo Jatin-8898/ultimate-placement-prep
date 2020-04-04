@@ -1,3 +1,4 @@
+import java.util.*;
 class MajorityElement{
 	/*To find the Majority Element which occure n/2 times in an array
 		Moore voting algorithm
@@ -6,7 +7,7 @@ class MajorityElement{
 	public static void main(String[] args) {
 		int[] arr = {1, 3, 1, 1, 2, 1};
 		printMajority(arr, arr.length);
-        System.out.println("THE MAJORITY ELE: "+majorityElement(arr));
+        System.out.println("THE MAJORITY ELE: " + majorityElement(arr));
 
 	}
 	
@@ -70,21 +71,42 @@ class MajorityElement{
             
             if(count == 0){     //Wen found 0 store that elemnt
                 count++;
-                major = num[i];
-                //System.out.println("HERE "+ major);            
+                major = num[i];            
 
-            }else if(major == num[i]){      //if major element and arr[i] is same incr count
+            }else if(major == num[i])      //if major element and arr[i] is same incr count
                 count++;
-                //System.out.println("INC "+ count);
             
-            }else{           //if count is greater than zero means we found other ele so decrement count
+            else              //if count is greater than zero means we found other ele so decr
                 count--;
-                //System.out.println("DEC "+ count);
-
-            } 
         }
         return major;
     }
+
+
+    /* Using Hashmap) : This method is somewhat similar to Moore voting algorithm in terms of time complexity, but in this case there is no need of second step of Moore voting algorithm.But as usual, here space complexity becomes O(n).
+    In Hashmap(key-value pair), at value,maintain a count for each element(key) and whenever count is greater than half of array length, we are just returning that key(majority element).
+
+    Time Complexity : O(n)
+    Auxiliary Space : O(n)
+ */
+    private static void findMajority(int[] arr)  
+    { 
+        HashMap<Integer,Integer> map = new HashMap<Integer, Integer>(); 
+  
+        for(int i = 0; i < arr.length; i++) { 
+            if (map.containsKey(arr[i])) { 
+                int count = map.get(arr[i]) +1; 
+                if (count > arr.length /2) { 
+                    System.out.println("Majority found :- " + arr[i]); 
+                    return; 
+                } else
+                    map.put(arr[i], count); 
+            } 
+            else
+                map.put(arr[i],1); 
+            } 
+            System.out.println(" No Majority element"); 
+    } 
 }
 
 
