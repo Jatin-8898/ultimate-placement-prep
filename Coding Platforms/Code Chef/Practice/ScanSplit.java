@@ -11,5 +11,8 @@ public class ScanSplit {
         for (int i = 0; i < stringsArray.length; i++) {
             intArray[i] = Integer.parseInt(stringsArray[i]);
         }
+        for (int j : intArray ){
+            System.out.println(j);
+        }
     }
 }
