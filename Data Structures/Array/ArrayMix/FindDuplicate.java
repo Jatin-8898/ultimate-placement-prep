@@ -22,9 +22,9 @@ class FindDuplicate{
 		*/
 		for (i=0; i<n; i++) {
 
-			if(a[Math.abs(a[i])]  >= 0 )
-				a[Math.abs(a[i])] =       -a[Math.abs(a[i])];	//this is to make the -ve sign
-			else
+			if(a[Math.abs(a[i])]  >= 0){
+				a[Math.abs(a[i])] =  -a[Math.abs(a[i])];	//this is to make the -ve sign
+			}else
 				System.out.println(Math.abs(a[i]) + " ");   //if alreaady -ve means we have seen so Repetition
 		}
 

@@ -1,5 +1,5 @@
+import java.util.Arrays;
 import java.util.Collections;
-import java.util.*;
 
 class ArrayMisc{
 	public static void main(String[] args) {
